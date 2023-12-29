@@ -1,10 +1,18 @@
+import { ThemeProvider } from 'styled-components'
+import { Button } from './components/Button.tsx'
+
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global.ts'
+
 export function App() {
-  
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <ThemeProvider theme={defaultTheme}>
+      <Button variant="primary" />
+      <Button variant="secondary" />
+      <Button variant="danger" />
+      <Button variant="success" />
+      <Button />
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
-
-
