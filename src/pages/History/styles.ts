@@ -58,14 +58,14 @@ export const HistoryList = styled.div`
   }
 `
 
-const TATUS_COLOR = {
+const STATUS_COLOR = {
   yellow: 'yellow-500',
   green: 'green-500',
   red: 'red-500',
 } as const
 
 interface PropsStatus {
-  statusColor: keyof typeof TATUS_COLOR
+  statusColor: keyof typeof STATUS_COLOR
 }
 
 export const Status = styled.span<PropsStatus>`
@@ -78,6 +78,6 @@ export const Status = styled.span<PropsStatus>`
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: ${(props) => props.theme[TATUS_COLOR[props.statusColor]]};
+    background: ${(props) => props.theme[STATUS_COLOR[props.statusColor]]};
   }
 `
