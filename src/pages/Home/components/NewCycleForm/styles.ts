@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../../breakpoints/breakpoints'
 
 export const FormContainer = styled.div`
   width: 100%;
@@ -11,6 +12,12 @@ export const FormContainer = styled.div`
   font-size: 1.25rem;
   font-weight: bold;
   flex-wrap: wrap;
+
+  @media ${breakpoints.md} {
+    gap: 1rem;
+    padding-top: 3rem;
+    justify-content: flex-start;
+  }
 `
 
 const BaseInput = styled.input`

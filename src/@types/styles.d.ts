@@ -1,4 +1,4 @@
-// Apensar código de definição de tipo.
+// Apenas código de definição de tipo.
 import 'styled-components'
 import { defaultTheme } from '../styles/themes/default'
 

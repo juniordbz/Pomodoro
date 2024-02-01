@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../breakpoints/breakpoints'
 
 export const HomeContainer = styled.main`
   display: flex;
@@ -12,6 +13,10 @@ export const HomeContainer = styled.main`
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
+
+    @media ${breakpoints.md} {
+      width: 100%;
+    }
   }
 `
 

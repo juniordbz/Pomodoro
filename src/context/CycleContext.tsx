@@ -42,6 +42,8 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
       cycles: [],
       activeCycleId: null,
     },
+
+    // armazenando no localStorage
     (initialState) => {
       const storedStateAsJson = localStorage.getItem(
         '@Pomodoro:cycles-state-1.0.0',
@@ -49,6 +51,8 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
       if (storedStateAsJson) {
         return JSON.parse(storedStateAsJson)
       }
+
+      // adicionando o valor inicial da aplicação caso a memória seja resetada
       return initialState
     },
   )
@@ -56,6 +60,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
   const { cycles, activeCycleId } = cyclesState
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
+  // ao att a aplicação não inicar o timer do zero.
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(() => {
     if (activeCycle) {
       return differenceInSeconds(new Date(), new Date(activeCycle.startDate))
@@ -63,6 +68,7 @@ export function CycleContextProvider({ children }: CyclesContextProviderProps) {
     return 0
   })
 
+  // criando espaço no local storage
   useEffect(() => {
     const stateJSON = JSON.stringify(cyclesState)
     localStorage.setItem('@Pomodoro:cycles-state-1.0.0', stateJSON)

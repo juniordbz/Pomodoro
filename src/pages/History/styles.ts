@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../breakpoints/breakpoints'
 
 export const HistoryContainer = styled.main`
   display: flex;
@@ -10,6 +11,10 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+
+  @media ${breakpoints.md} {
+    padding: 3.5rem 0;
+  }
 `
 export const HistoryList = styled.div`
   flex: 1;
@@ -20,6 +25,10 @@ export const HistoryList = styled.div`
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+
+    @media ${breakpoints.md} {
+      width: 100%;
+    }
   }
 
   th {

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../../breakpoints/breakpoints'
 
 export const CountdownContainer = styled.div`
   font-family: 'Roboto Mono', monospace;
@@ -13,6 +14,13 @@ export const CountdownContainer = styled.div`
     background: ${(props) => props.theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
+  }
+
+  @media ${breakpoints.md} {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    width: 100%;
+    justify-content: center;
   }
 `
 export const Separator = styled.div`
