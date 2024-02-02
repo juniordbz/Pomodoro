@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Pomodoro Timer em React com TypeScript e Styled Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O projeto é uma aplicação de Pomodoro Timer desenvolvida utilizando React, TypeScript e Styled Components para oferecer uma experiência de gerenciamento de tempo envolvente e esteticamente agradável. Destaca-se pela inclusão de um recurso de histórico de tarefas, permitindo ao usuário revisitar e analisar suas sessões de trabalho.
 
-Currently, two official plugins are available:
+## Principais Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Temporizador Pomodoro Ajustável:** Proporciona ao usuário a flexibilidade de personalizar intervalos de trabalho e descanso, seguindo a técnica Pomodoro para aumentar a produtividade.
+- **Contagem Regressiva Visual:** Utiliza uma representação visual clara do tempo restante, criando uma experiência intuitiva e fácil de acompanhar.
+- **Estilização com Styled Components:** A estilização é implementada de maneira elegante e eficiente com Styled Components, permitindo uma abordagem mais declarativa e dinâmica para a estilização de componentes.
+- **React e TypeScript:** A combinação destas tecnologias proporciona um desenvolvimento mais estruturado e seguro, garantindo um código limpo e organizado.
+- **Histórico de Tarefas:** Destaca-se pela inclusão de um recurso que registra o histórico de sessões de trabalho concluídas, permitindo ao usuário revisitar suas realizações e padrões de produtividade ao longo do tempo.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- TypeScript
+- Styled Components
 
-- Configure the top-level `parserOptions` property like this:
+## Como Executar o Projeto
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone o repositório.
+2. Instale as dependências utilizando o gerenciador de pacotes de sua escolha.
+3. Execute o projeto localmente.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Este projeto oferece uma abordagem moderna e eficaz para o gerenciamento de tempo, utilizando técnicas comprovadas e proporcionando uma experiência visualmente agradável. O acréscimo do histórico de tarefas permite uma reflexão sobre a produtividade passada, tornando-o uma ferramenta completa para aprimorar a gestão do tempo.
